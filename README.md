@@ -6,10 +6,13 @@ Dobrodošli u **Logic Hub** – digitalnu destinaciju za logičke i matematičke
 Logic Hub je skup laganih, brzih i optimizovanih igara koje rade direktno u vašem pretraživaču. Nema instalacije, nema reklama – samo čista logika.
 
 ## 🎮 Igre koje možete igrati
-*   **Logička Vaga** – Izazov za vašu logiku i procenu.
-*   **Lavirint** – Testirajte svoju orijentaciju i brzinu.
-*   **Magična Karta** – Zabavan trik koji će vas ostaviti u čudu.
-*   **Slagalica** – Klasičan test strpljenja i organizacije.
+* **Logička Vaga** – Pronađite različitu lopticu na vagi uz minimalan broj merenja.
+* **Lavirint** – Pronađite pravi put kroz lavirint i testirajte svoju snalažljivost.
+* **Magična Karta** – Zabavan matematičko-magijski trik u kome igra uvek pogađa kartu koju ste zamislili.
+* **Slagalica** – Slaganje i pomeranje brojeva u tačan redosled.
+* **Neonski Odboj** – Brzi test refleksa, spretnosti i preciznosti u neon stilu.
+* **Izazov 100** – Interaktivni kviz i test znanja sa različitim zadacima.
+* **Kraljeva Riznica** – Rešite klasičan matematički problem: otkrijte lažnu vreću zlata sa samo jednim merenjem na vagi.
 
 ## 🌐 Posetite sajt
 Isprobajte igre odmah: 👉 **[https://mujagi77.github.io/](https://mujagi77.github.io/)**
