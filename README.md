@@ -13,6 +13,7 @@ Logic Hub je skup laganih, brzih i optimizovanih igara koje rade direktno u vaš
 * **Neonski Odboj** – Brzi test refleksa, spretnosti i preciznosti u neon stilu.
 * **Izazov 100** – Interaktivni kviz i test znanja sa različitim zadacima.
 * **Kraljeva Riznica** – Rešite klasičan matematički problem: otkrijte lažnu vreću zlata sa samo jednim merenjem na vagi.
+* **Okreni Obrni 3D – Rotirajte kocku, složite svaku stranu u istoj boji i otključajte nove teme.
 
 ## 🌐 Posetite sajt
 Isprobajte igre odmah: 👉 **[https://mujagi77.github.io/](https://mujagi77.github.io/)**
