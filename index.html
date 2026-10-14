@@ -7,7 +7,6 @@
 <title>Mujagi77 | Logic Hub</title>
 <link rel="canonical" href="https://mujagi77.github.io/">
 
-<!-- SEO + SHARE -->
 <meta name="description" content="Logičke i matematičke igre za trening mozga i logike. Besplatno, radi na svim uređajima.">
 <meta property="og:title" content="Mujagi77 | Logic Hub">
 <meta property="og:description" content="Logičke i matematičke igre za trening mozga i logike. Besplatno, radi na svim uređajima.">
@@ -17,59 +16,63 @@
 <link rel="icon" href="img/favicon.png">
 
 <style>
-:root{
-    --neon:#66fcf1;
-    --card:rgba(255,255,255,0.05);
+:root {
+    --neon: #66fcf1;
+    --card: rgba(255, 255, 255, 0.05);
 }
 
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    color:white;
-    background:#05070d;
-    overflow-x:hidden;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: #05070d;
+    overflow-x: hidden;
 }
 
-#stars{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:-2;
+#stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
 }
 
-body::before, body::after{
-    content:"";
-    position:fixed;
-    filter:blur(50px);
-    z-index:-1;
+body::before, body::after {
+    content: "";
+    position: fixed;
+    filter: blur(50px);
+    z-index: -1;
 }
 
-body::before{
-    width:600px;height:600px;
-    background:radial-gradient(circle, rgba(102,252,241,0.12), transparent 60%);
-    top:10%;left:15%;
+body::before {
+    width: 600px; 
+    height: 600px;
+    background: radial-gradient(circle, rgba(102,252,241,0.12), transparent 60%);
+    top: 10%; 
+    left: 15%;
 }
 
-body::after{
-    width:500px;height:500px;
-    background:radial-gradient(circle, rgba(79,172,254,0.12), transparent 60%);
-    bottom:10%;right:10%;
+body::after {
+    width: 500px; 
+    height: 500px;
+    background: radial-gradient(circle, rgba(79,172,254,0.12), transparent 60%);
+    bottom: 10%; 
+    right: 10%;
 }
 
-.container{
-    max-width:900px;
-    margin:auto;
-    padding:30px;
+.container {
+    max-width: 950px;
+    margin: auto;
+    padding: 30px 20px;
 }
 
-.profile{
-    text-align:center;
-    padding:30px;
-    background:var(--card);
-    border:1px solid rgba(102,252,241,0.2);
-    border-radius:20px;
+.profile {
+    text-align: center;
+    padding: 30px;
+    background: var(--card);
+    border: 1px solid rgba(102, 252, 241, 0.2);
+    border-radius: 20px;
 }
 
 h1 {
@@ -78,17 +81,17 @@ h1 {
     font-weight: bold;
 }
 
-.profile img{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    border:2px solid var(--neon);
-    box-shadow:0 0 20px var(--neon);
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid var(--neon);
+    box-shadow: 0 0 20px var(--neon);
 }
 
-#bio{
+#bio {
     margin-top: 15px;
-    min-height: 100px;
+    min-height: 80px;
     line-height: 1.6;
     color: var(--neon);
     opacity: 0;
@@ -101,9 +104,16 @@ h1 {
     transform: translateY(0);
 }
 
-.share-btn {
+.btn-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
     margin-top: 15px;
-    padding: 10px 20px;
+}
+
+.action-btn {
+    padding: 10px 18px;
     background: transparent;
     border: 1px solid var(--neon);
     color: var(--neon);
@@ -114,66 +124,323 @@ h1 {
     transition: 0.3s;
 }
 
-.share-btn:hover {
+.action-btn:hover {
     background: var(--neon);
     color: #05070d;
 }
 
-.grid{
-    margin-top:30px;
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+.featured-sec {
+    margin-top: 30px;
 }
 
-.card{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    padding:15px;
-    background:var(--card);
-    border-radius:15px;
-    border:1px solid rgba(255,255,255,0.1);
-    text-decoration:none;
-    color:white;
-    transition:0.3s;
+.featured-card {
+    background: linear-gradient(135deg, rgba(102,252,241,0.1) 0%, rgba(5,7,13,0.8) 100%);
+    border: 2px solid var(--neon);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 0 20px rgba(102, 252, 241, 0.15);
+    position: relative;
+    overflow: hidden;
 }
 
-.card:hover{
-    transform:scale(1.03);
-    border-color:var(--neon);
+.featured-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--neon);
+    color: #05070d;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 12px;
 }
 
-.card img{
-    width:70px;
-    height:70px;
-    border-radius:10px;
+.featured-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    object-fit: cover;
 }
 
-.play{
-    margin-left:auto;
-    padding:8px 14px;
-    border:1px solid var(--neon);
-    color:var(--neon);
-    border-radius:10px;
+.featured-info h2 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    color: var(--neon);
 }
 
-.youtube{
-    margin-top:30px;
-    text-align:center;
-    padding:20px;
-    background:var(--card);
-    border-radius:20px;
-    border:1px solid rgba(102,252,241,0.2);
+.featured-info p {
+    margin: 0 0 15px 0;
+    font-size: 13px;
+    color: #ccc;
+    line-height: 1.4;
 }
 
-.youtube img{
-    width:160px;
-    border-radius:14px;
+.controls {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
 }
 
-@media(max-width:600px){
-    .card img{width:55px;height:55px;}
+.search-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 18px;
+    background: var(--card);
+    border: 1px solid rgba(102, 252, 241, 0.3);
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.search-box:focus {
+    border-color: var(--neon);
+    box-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    background: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--neon);
+    color: #05070d;
+    border-color: var(--neon);
+    font-weight: bold;
+}
+
+.grid {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: var(--card);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon);
+    box-shadow: 0 5px 15px rgba(102, 252, 241, 0.15);
+}
+
+.fav-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+    z-index: 2;
+}
+
+.fav-btn:hover {
+    transform: scale(1.3);
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.badge-novo { background: #ff0055; color: white; }
+.badge-hot { background: #ff9900; color: black; }
+
+.info-btn {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.info-btn:hover {
+    background: var(--neon);
+    color: #05070d;
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.play {
+    margin-top: auto;
+    padding: 8px 20px;
+    border: 1px solid var(--neon);
+    color: var(--neon);
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.card:hover .play {
+    background: var(--neon);
+    color: #05070d;
+}
+
+.youtube {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    background: var(--card);
+    border-radius: 20px;
+    border: 1px solid rgba(102, 252, 241, 0.2);
+}
+
+.youtube img {
+    width: 160px;
+    border-radius: 14px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #0b0f19;
+    border: 1px solid var(--neon);
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 85%;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(102, 252, 241, 0.3);
+}
+
+.modal-content h3 { color: var(--neon); margin-top: 0; }
+.modal-content p { color: #ccc; line-height: 1.5; font-size: 14px; }
+.close-btn {
+    margin-top: 15px;
+    padding: 8px 20px;
+    background: var(--neon);
+    border: none;
+    color: #05070d;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media(max-width: 600px) {
+    .featured-card { flex-direction: column; text-align: center; }
+    .grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+    .card { padding: 15px 10px; }
+    .card img { width: 60px; height: 60px; }
+    .card-title { font-size: 14px; }
+}
+
+#slikaPregled{
+    position: fixed;
+    z-index: 150;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(.6);
+    transition: opacity .18s ease, transform .18s ease;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #05070d;
+    border: 2px solid var(--neon);
+    box-shadow: 0 10px 40px rgba(0,0,0,.7), 0 0 25px rgba(102,252,241,.35);
+}
+
+#slikaPregled.show{
+    opacity: 1;
+    transform: scale(1);
+}
+
+#slikaPregled.touch{
+    box-shadow: 0 0 0 100vmax rgba(0,0,0,.65), 0 0 25px rgba(102,252,241,.35);
+}
+
+#slikaPregled img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.card, .featured-card{
+    -webkit-touch-callout: none;
+}
+
+.card img, .featured-card img{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 </style>
 </head>
@@ -187,104 +454,427 @@ h1 {
         <img src="img/profilna.jpg" alt="Profil Mujagi77">
         <h1>Mujagi77</h1>
         <p id="bio"></p>
-        <button onclick="podeliSadrzaj()" class="share-btn">Podeli sa prijateljima</button>
+        <div class="btn-group">
+            <button onclick="podeliSadrzaj()" onmouseenter="hoverBeep()" class="action-btn">Podeli sa prijateljima</button>
+            <button onclick="otvoriNasumicnuIgru()" onmouseenter="hoverBeep()" class="action-btn">🎲 Nasumična igra</button>
+        </div>
     </div>
-
-    <div class="grid">
-        <a class="card" href="https://mujagi77.github.io/logicka-vaga/" aria-label="Logička Vaga">
+    
+    <div class="featured-sec">
+        <div class="featured-card">
+            <span class="featured-badge">⭐ PREPORUKA</span>
             <img src="img/logicka-vaga.png" alt="Logička Vaga">
-            <div>Logička Vaga</div>
-            <div class="play">PLAY</div>
-        </a>
-        <a class="card" href="https://mujagi77.github.io/lavirint-game/" aria-label="Lavirint">
-            <img src="img/lavirint-game.jpg" alt="Lavirint">
-            <div>Lavirint</div>
-            <div class="play">PLAY</div>
-        </a>
-        <a class="card" href="https://mujagi77.github.io/Magicna-Karta/" aria-label="Magična Karta">
-            <img src="img/magicna-karta.jpg" alt="Magična Karta">
-            <div>Magična Karta</div>
-            <div class="play">PLAY</div>
-        </a>
-        <a class="card" href="https://mujagi77.github.io/napredna-slagalica/" aria-label="Slagalica">
-            <img src="img/napredna-slagalica.jpg" alt="Slagalica">
-            <div>Slagalica</div>
-            <div class="play">PLAY</div>
-        </a>
-        <a class="card" href="https://mujagi77.github.io/Neonski-Odboj/" aria-label="Neonski Odboj">
-            <img src="img/neonski-odboj.jpg" alt="Neonski Odboj">
-            <div>Neonski Odboj</div>
-            <div class="play">PLAY</div>
-        </a>
-        <a class="card" href="https://mujagi77.github.io/izazov-100/" aria-label="Izazov 100">
-            <img src="img/izazov-100.png" alt="Izazov 100">
-            <div>Izazov 100</div>
-            <div class="play">PLAY</div>
-        </a>
-        <a class="card" href="https://mujagi77.github.io/kraljeva-riznica/" aria-label="Kraljeva Riznica">
-            <img src="img/kraljeva-riznica.jpeg" alt="Kraljeva Riznica">
-            <div>Kraljeva Riznica</div>
-            <div class="play">PLAY</div>
-        </a>
-        <a class="card" href="https://mujagi77.github.io/okreni-obrni-3d/" aria-label="Okreni Obrni 3D">
-
-            <img src="img/okreni-obrni.jpeg" alt="Okreni Obrni 3D">
-
-            <div>Okreni Obrni 3D</div>
-
-            <div class="play">PLAY</div>
-
-       </a>
-
-        
+            <div class="featured-info">
+                <h2>Logička Vaga</h2>
+                <p>Jedna od najpoznatijih logičkih zagonetki na svetu — pronađite lopticu koja odstupa po težini u samo tri merenja!</p>
+                <a href="https://mujagi77.github.io/logicka-vaga/" onmouseenter="hoverBeep()" onclick="clickBeep()" class="action-btn" style="text-decoration: none; display: inline-block;">IGRAJ ODMAH</a>
+            </div>
+        </div>
     </div>
+    
+    <div class="controls">
+        <input type="text" id="searchInput" class="search-box" placeholder="🔍 Pretraži igre..." oninput="filtrirajIgre()">
+        <div class="filters">
+            <button class="filter-btn active" onclick="postaviKategoriju('sve', this)" onmouseenter="hoverBeep()">Sve</button>
+            <button class="filter-btn" onclick="postaviKategoriju('omiljene', this)" onmouseenter="hoverBeep()">Omiljene ❤️</button>
+            <button class="filter-btn" onclick="postaviKategoriju('logika', this)" onmouseenter="hoverBeep()">Logika</button>
+            <button class="filter-btn" onclick="postaviKategoriju('matematika', this)" onmouseenter="hoverBeep()">Matematika</button>
+            <button class="filter-btn" onclick="postaviKategoriju('slagalica', this)" onmouseenter="hoverBeep()">Slagalice</button>
+            <button class="filter-btn" onclick="postaviKategoriju('akcija', this)" onmouseenter="hoverBeep()">Akcija</button>
+        </div>
+    </div>
+    
+    <div class="grid" id="gamesGrid"></div>
 
     <div class="youtube">
         <h3>YouTube Kanal</h3>
         <img src="img/youtube-qr.jpg" alt="YouTube QR">
-        <br>
-        <a href="https://www.youtube.com/@mujagi77" target="_blank" rel="noopener noreferrer">Otvori kanal</a>
+        <br><br>
+        <a href="https://www.youtube.com/@mujagi77" target="_blank" rel="noopener noreferrer" onmouseenter="hoverBeep()" onclick="clickBeep()" style="color: var(--neon); font-weight: bold; text-decoration: none;">Otvori kanal</a>
+    </div>
+</div>
+
+<div id="infoModal" class="modal">
+    <div class="modal-content">
+        <h3 id="modalTitle">Naslov</h3>
+        <p id="modalDesc">Opis igre...</p>
+        <button class="close-btn" onmouseenter="hoverBeep()" onclick="ZatvoriModal()">Uredu</button>
     </div>
 </div>
 
 <script>
-function podeliSadrzaj() {
-    const podaci = { title: 'Mujagi77 | Logic Hub', text: 'Isprobaj ove logičke izazove!', url: window.location.href };
-    if (navigator.share) { navigator.share(podaci).catch(console.error); } 
-    else { navigator.clipboard.writeText(window.location.href); alert('Link kopiran u klipbord!'); }
+const sveIgre = [
+    { id: 1, naslov: "Logička Vaga", kat: "logika", link: "https://mujagi77.github.io/logicka-vaga/", slika: "img/logicka-vaga.png", tag: "hot", opis: "Klasična mozgalica sa vaganjem loptica! Otkrijte koja se loptica razlikuje po težini u samo tri merenja. Izaberite nivo sa 3, 9 ili 12 loptica i testirajte svoju logiku." },
+    { id: 2, naslov: "Lavirint", kat: "logika", link: "https://mujagi77.github.io/lavirint-game/", slika: "img/lavirint-game.jpg", tag: "", opis: "Vodite smajlija kroz lavirint, sakupite sve poene i izbegnite đavola koji vas juri! Kako nivoi odmiču, igra postaje sve brža i teža." },
+    { id: 3, naslov: "Magična Karta", kat: "matematika", link: "https://mujagi77.github.io/Magicna-Karta/", slika: "img/magicna-karta.jpg", tag: "", opis: "Klasični trik sa 21 kartom! Zapamtite jednu kartu, pratite kako je program ređa u tri kolone i označite u kojoj se koloni nalazi. Nakon tri ponavljanja, igra će bez greške pogoditi vaš izbor." },
+    { id: 4, naslov: "Slagalica", kat: "slagalica", link: "https://mujagi77.github.io/napredna-slagalica/", slika: "img/napredna-slagalica.jpg", tag: "novo", opis: "Klasična slagalica sa pomeranjem pločica! Poredajte brojeve po redu pomeranjem polja na tabli. Izaberite težinu između 3x3, 4x4 i 5x5 i testirajte svoju spretnost." },
+    { id: 5, naslov: "Neonski Odboj", kat: "akcija", link: "https://mujagi77.github.io/Neonski-Odboj/", slika: "img/neonski-odboj.jpg", tag: "hot", opis: "Svemirski arkadni izazov! Postavljajte neonske odbojnike da usmeravate svetlosnu loptu, uništavajte druge loptice za poene i koristite zidove za odbijanje. Čuvajte se opasnih crnih rupa i pripremite se za žestoku borbu sa bossovima!" },
+    { id: 6, naslov: "Izazov 100", kat: "matematika", link: "https://mujagi77.github.io/izazov-100/", slika: "img/izazov-100.png", tag: "", opis: "Uzbudljiv kviz znanja! Testirajte se kroz set od 25 nasumičnih pitanja iz baze od čak 100 različitih zadataka. Pokažite šta znate i oborite sopstveni rekord!" },
+    { id: 7, naslov: "Kraljeva Riznica", kat: "logika", link: "https://mujagi77.github.io/kraljeva-riznica/", slika: "img/kraljeva-riznica.jpeg", tag: "", opis: "Logička zagonetka sa vrećama zlata! Izaberite tačnu količinu novčića iz svake vreće, stavite ih na vagu i u samo jednom merenju otkrijte u kojoj su vreći lažni zlatnici." },
+    { id: 8, naslov: "Okreni Obrni 3D", kat: "logika", link: "https://mujagi77.github.io/okreni-obrni-3d/", slika: "img/okreni-obrni.jpeg", tag: "novo", opis: "Prava Okreni Obrni 3D kocka u pretraživaču! Okrećite slojeve dugmićima, prstom na telefonu, mišem ili tastaturom na računaru, pratite vreme i broj poteza i otključavajte nove teme kocke dok igrate." },
+    { id: 9, naslov: "Sferna Slagalica Brojeva 3D", kat: "slagalica", link: "https://mujagi77.github.io/sferna-slagalica-3d/", slika: "img/sferna-slagalica-3d.jpeg", tag: "novo", opis: "Moderna 3D slagalica smeštena na rotirajuću sferu! Okrećite sferu u svim pravcima, slažite pločice od 1 do kraja kroz 8 progresivnih nivoa i koristite ugrađeni pametni sistem za savete i automatsko rešavanje." }
+];
+
+let trenutnaKategorija = 'sve';
+let omiljeneIgre = [];
+let audioCtx = null;
+let blokirajKlik = false;
+
+try {
+    omiljeneIgre = JSON.parse(localStorage.getItem('mujagi_favs')) || [];
+} catch (e) {
+    omiljeneIgre = [];
 }
 
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-function clickBeep(){
+function inicijalizujAudio() {
+    if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    if (audioCtx.state === "suspended") {
+        audioCtx.resume();
+    }
+}
+
+window.addEventListener("click", inicijalizujAudio, { once: true });
+window.addEventListener("touchstart", inicijalizujAudio, { once: true });
+
+function hoverBeep() {
+    inicijalizujAudio();
+    if (!audioCtx) return;
+
+    const t = audioCtx.currentTime;
     const osc = audioCtx.createOscillator();
     const gain = audioCtx.createGain();
-    osc.type = "sine"; osc.frequency.value = 600; gain.gain.value = 0.08;
-    osc.connect(gain); gain.connect(audioCtx.destination);
-    osc.start(); osc.stop(audioCtx.currentTime + 0.08);
+    
+    osc.type = "sine";
+    osc.frequency.setValueAtTime(800, t);
+    
+    gain.gain.setValueAtTime(0, t);
+    gain.gain.linearRampToValueAtTime(0.02, t + 0.005);
+    gain.gain.exponentialRampToValueAtTime(0.001, t + 0.04); 
+    
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    
+    osc.start(t);
+    osc.stop(t + 0.04);
 }
-document.addEventListener("click", () => { if(audioCtx.state === "suspended") audioCtx.resume(); }, { once:true });
-document.querySelectorAll(".card").forEach(card=>card.addEventListener("click", clickBeep));
+
+function clickBeep() {
+    inicijalizujAudio();
+    if (!audioCtx) return;
+
+    const t = audioCtx.currentTime;
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    
+    osc.type = "triangle";
+    osc.frequency.setValueAtTime(500, t);
+    osc.frequency.exponentialRampToValueAtTime(250, t + 0.08);
+    
+    gain.gain.setValueAtTime(0, t);
+    gain.gain.linearRampToValueAtTime(0.07, t + 0.005);
+    gain.gain.exponentialRampToValueAtTime(0.001, t + 0.08);
+    
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    
+    osc.start(t);
+    osc.stop(t + 0.08);
+}
+
+function toggleOmiljena(e, id) {
+    e.stopPropagation();
+    e.preventDefault();
+    clickBeep();
+
+    if (omiljeneIgre.includes(id)) {
+        omiljeneIgre = omiljeneIgre.filter(favId => favId !== id);
+    } else {
+        omiljeneIgre.push(id);
+    }
+
+    localStorage.setItem('mujagi_favs', JSON.stringify(omiljeneIgre));
+    filtrirajIgre();
+}
+
+function iscrtajIgre(listeIgra) {
+    const grid = document.getElementById("gamesGrid");
+    grid.innerHTML = "";
+
+    if (listeIgra.length === 0) {
+        grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: #888; padding: 20px;">Nije pronađena nijedna igra u ovoj kategoriji.</div>`;
+        return;
+    }
+
+    listeIgra.forEach(igra => {
+        const card = document.createElement("a");
+        card.className = "card";
+        card.href = igra.link;
+
+        const isFav = omiljeneIgre.includes(igra.id);
+        const favSrce = isFav ? "❤️" : "🤍";
+
+        let badgeHTML = "";
+        if (igra.tag === "novo") badgeHTML = `<span class="badge badge-novo">NOVO</span>`;
+        else if (igra.tag === "hot") badgeHTML = `<span class="badge badge-hot">HOT</span>`;
+
+        card.innerHTML = `
+            <button class="fav-btn" onmouseenter="hoverBeep()" onclick="toggleOmiljena(event, ${igra.id})" title="Omiljena">${favSrce}</button>
+            ${badgeHTML}
+            <img src="${igra.slika}" alt="${igra.naslov}">
+            <div class="card-title">${igra.naslov}</div>
+            <div class="play">PLAY</div>
+            <div class="info-btn" onmouseenter="hoverBeep()" data-id="${igra.id}" title="Pravila">i</div>
+        `;
+
+        const infoBtn = card.querySelector(".info-btn");
+        infoBtn.addEventListener("click", (e) => otvoriInfoModal(e, igra.naslov, igra.opis));
+
+        card.addEventListener("mouseenter", hoverBeep);
+        card.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (blokirajKlik) return;
+            clickBeep();
+            setTimeout(() => { window.location.href = igra.link; }, 90);
+        });
+
+        grid.appendChild(card);
+    });
+}
+
+function filtrirajIgre() {
+    const unos = document.getElementById("searchInput").value.toLowerCase();
+    
+    const filtrirane = sveIgre.filter(igra => {
+        const poklapaSeNaziv = igra.naslov.toLowerCase().includes(unos);
+        let poklapaSeKat = false;
+
+        if (trenutnaKategorija === 'sve') poklapaSeKat = true;
+        else if (trenutnaKategorija === 'omiljene') poklapaSeKat = omiljeneIgre.includes(igra.id);
+        else poklapaSeKat = (igra.kat === trenutnaKategorija);
+
+        return poklapaSeNaziv && poklapaSeKat;
+    });
+
+    iscrtajIgre(filtrirane);
+}
+
+function postaviKategoriju(kat, dugme) {
+    clickBeep();
+    trenutnaKategorija = kat;
+    document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
+    dugme.classList.add("active");
+    filtrirajIgre();
+}
+
+function otvoriInfoModal(e, naslov, opis) {
+    e.stopPropagation();
+    e.preventDefault();
+    clickBeep();
+    document.getElementById("modalTitle").innerText = naslov;
+    document.getElementById("modalDesc").innerText = opis;
+    document.getElementById("infoModal").style.display = "flex";
+}
+
+function ZatvoriModal() {
+    clickBeep();
+    document.getElementById("infoModal").style.display = "none";
+}
+
+function otvoriNasumicnuIgru() {
+    clickBeep();
+    const nasumicna = sveIgre[Math.floor(Math.random() * sveIgre.length)];
+    setTimeout(() => { 
+        window.location.href = nasumicna.link; 
+    }, 120);
+}
+
+function podeliSadrzaj() {
+    clickBeep();
+    const cistUrl = "https://mujagi77.github.io/"; 
+    const podaci = { 
+        title: 'Mujagi77 | Logic Hub', 
+        text: 'Isprobaj ove besplatne logičke i matematičke igre!', 
+        url: cistUrl 
+    };
+
+    if (navigator.share) { 
+        navigator.share(podaci).catch(() => {}); 
+    } else { 
+        navigator.clipboard.writeText(cistUrl).then(() => {
+            alert('Kopiran je čist link: ' + cistUrl);
+        });
+    }
+}
 
 const canvas = document.getElementById("stars");
 const ctx = canvas.getContext("2d");
-function resize(){ canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-resize(); window.addEventListener("resize", resize);
+
+function resize() { 
+    canvas.width = window.innerWidth; 
+    canvas.height = window.innerHeight; 
+}
+resize(); 
+window.addEventListener("resize", resize);
+
 let stars = [];
-for(let i=0;i<90;i++){ stars.push({x:Math.random()*canvas.width, y:Math.random()*canvas.height, r:Math.random()*1.3, d:Math.random()*0.8}); }
-function draw(){
-    ctx.clearRect(0,0,canvas.width,canvas.height); ctx.fillStyle="white";
-    for(let s of stars){
-        ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2); ctx.fill();
-        s.y += s.d; if(s.y > canvas.height){ s.y = 0; s.x = Math.random()*canvas.width; }
+for (let i = 0; i < 90; i++) { 
+    stars.push({
+        x: Math.random() * canvas.width, 
+        y: Math.random() * canvas.height, 
+        r: Math.random() * 1.3, 
+        d: Math.random() * 0.8
+    }); 
+}
+
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); 
+    ctx.fillStyle = "white";
+    for (let s of stars) {
+        ctx.beginPath(); 
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2); 
+        ctx.fill();
+        s.y += s.d; 
+        if (s.y > canvas.height) { 
+            s.y = 0; 
+            s.x = Math.random() * canvas.width; 
+        }
     }
     requestAnimationFrame(draw);
 }
 draw();
 
-// BIO - Fade-in efekat
 const bio = document.getElementById("bio");
 bio.textContent = "Ja sam Miljan Rančić (mujagi77), autor ovih logičkih i matematičkih igara. Kreiram digitalne izazove koji testiraju vašu logiku, koncentraciju i strpljenje. Sve igre su besplatne i potpuno optimizovane za rad na svim uređajima. Igrajte, vežbajte um i podelite link sa prijateljima!";
 setTimeout(() => { bio.classList.add("visible"); }, 100);
+
+iscrtajIgre(sveIgre);
+
+(function(){
+    const box = document.createElement("div");
+    box.id = "slikaPregled";
+
+    const veca = document.createElement("img");
+    box.appendChild(veca);
+    document.body.appendChild(box);
+
+    const SEL = ".card img, .featured-card img";
+
+    let touchTimer = null;
+    let drziPrst = false;
+    let pregledTouch = false;
+    let startX = 0;
+    let startY = 0;
+
+    function prikazi(img, centriraj){
+        const W = window.innerWidth;
+        const H = window.innerHeight;
+
+        const s = Math.round(
+            centriraj
+            ? Math.min(W * .86, H * .7, 420)
+            : Math.min(340, W * .8, H * .7)
+        );
+
+        veca.src = img.currentSrc || img.src;
+        veca.alt = img.alt;
+
+        box.style.width = s + "px";
+        box.style.height = s + "px";
+
+        let left, top;
+
+        if(centriraj){
+            left = (W - s) / 2;
+            top = (H - s) / 2;
+        } else {
+            const r = img.getBoundingClientRect();
+            left = r.left + r.width / 2 - s / 2;
+            top = r.top + r.height / 2 - s / 2;
+            left = Math.max(8, Math.min(left, W - s - 8));
+            top = Math.max(8, Math.min(top, H - s - 8));
+        }
+
+        box.style.left = left + "px";
+        box.style.top = top + "px";
+
+        box.classList.toggle("touch", !!centriraj);
+        box.classList.add("show");
+    }
+
+    function sakrij(){
+        box.classList.remove("show");
+    }
+
+    document.addEventListener("pointerover", e => {
+        if(e.pointerType !== "mouse") return;
+        const img = e.target.closest ? e.target.closest(SEL) : null;
+        if(img) prikazi(img, false);
+    });
+
+    document.addEventListener("pointerout", e => {
+        if(e.pointerType !== "mouse") return;
+        const img = e.target.closest ? e.target.closest(SEL) : null;
+        if(img) sakrij();
+    });
+
+    window.addEventListener("scroll", sakrij, true);
+    document.addEventListener("keydown", sakrij);
+
+    document.addEventListener("touchstart", e => {
+        const img = e.target.closest ? e.target.closest(SEL) : null;
+        if(!img || e.touches.length !== 1) return;
+
+        drziPrst = true;
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+
+        clearTimeout(touchTimer);
+
+        touchTimer = setTimeout(() => {
+            pregledTouch = true;
+            prikazi(img, true);
+        }, 350);
+    }, { passive:true });
+
+    document.addEventListener("touchmove", e => {
+        if(pregledTouch){
+            e.preventDefault();
+            return;
+        }
+
+        if(!touchTimer) return;
+
+        const t = e.touches[0];
+
+        if(Math.hypot(t.clientX - startX, t.clientY - startY) > 10){
+            clearTimeout(touchTimer);
+            touchTimer = null;
+        }
+    }, { passive:false });
+
+    function kraj(){
+        clearTimeout(touchTimer);
+        touchTimer = null;
+        drziPrst = false;
+
+        if(pregledTouch){
+            pregledTouch = false;
+            sakrij();
+            
+            blokirajKlik = true;
+            setTimeout(() => { blokirajKlik = false; }, 500);
+        }
+    }
+
+    document.addEventListener("touchend", kraj);
+    document.addEventListener("touchcancel", kraj);
+
+    document.addEventListener("contextmenu", e => {
+        if(drziPrst) e.preventDefault();
+    });
+})();
 </script>
 </body>
 </html>
