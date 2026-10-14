@@ -848,7 +848,7 @@ iscrtajIgre(sveIgre);
 
         const t = e.touches[0];
 
-        if(Math.hypot(t.clientX - startX, t.clientY - startY) > 10){
+        if(Math.hypot(t.clientX - startX, t.clientY - startY) > 30){
             clearTimeout(touchTimer);
             touchTimer = null;
         }
