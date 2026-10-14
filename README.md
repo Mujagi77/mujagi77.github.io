@@ -14,6 +14,7 @@ Logic Hub je skup laganih, brzih i optimizovanih igara koje rade direktno u vaš
 * **Izazov 100** – Interaktivni kviz i test znanja sa različitim zadacima.
 * **Kraljeva Riznica** – Rešite klasičan matematički problem: otkrijte lažnu vreću zlata sa samo jednim merenjem na vagi.
 * **Okreni Obrni 3D** – Rotiranje kocke, slaganje svake strane u istoj boji i otključavanje novih tema.
+* **Sferna Slagalica Brojeva 3D** – Moderna 3D slagalica smeštena na rotirajuću sferu sa brojevima.
 
 ## 🌐 Posetite sajt
 Isprobajte igre odmah: 👉 **[https://mujagi77.github.io/](https://mujagi77.github.io/)**
